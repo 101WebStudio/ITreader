@@ -196,7 +196,6 @@
     .logo:hover {
       transform: scale(1.02);
     }
-    /* logo image replacement */
     .logo-img {
       height: 44px;
       width: auto;
@@ -218,7 +217,6 @@
       margin-top: 2px;
     }
 
-    /* nav styles - laptop first */
     nav ul {
       display: flex;
       list-style: none;
@@ -234,7 +232,6 @@
       position: relative;
       transition: color 0.2s;
     }
-    /* elegant underline effect */
     nav ul li a:not(.btn)::after {
       content: '';
       position: absolute;
@@ -252,7 +249,6 @@
       width: 100%;
     }
 
-    /* special styling for nav buttons */
     nav ul li .btn {
       padding: 8px 18px;
       font-size: 0.9rem;
@@ -261,7 +257,6 @@
     nav ul li .btn-outline {
       border-width: 2px;
     }
-    /* dark mode nav link color */
     body.dark-mode nav ul li a:not(.btn) {
       color: var(--dark-color);
     }
@@ -295,7 +290,7 @@
       cursor: pointer;
     }
 
-    /* ===== HERO (blue overlay removed) ===== */
+    /* ===== HERO ===== */
     .hero {
       position: relative;
       color: white;
@@ -698,7 +693,6 @@
   <header>
     <div class="container header-container">
       <a href="#" class="logo">
-        <!-- logo image inserted as requested -->
         <img src="it reader logo.png" alt="ITreader logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
         <div class="logo-text" style="display:inline-block;">ITreader<span>learn & earn</span></div>
       </a>
@@ -716,7 +710,7 @@
     </div>
   </header>
 
-  <!-- Hero – blue overlay removed, background enlarged -->
+  <!-- Hero -->
   <section class="hero" id="home">
     <div class="container">
       <h1>Earn rewards <span style="color:var(--accent-light);">while you learn</span></h1>
@@ -851,7 +845,7 @@
     </div>
   </section>
 
-  <!-- Trustpilot reviews -->
+  <!-- Trustpilot reviews with the exact link -->
   <section class="trustpilot-reviews" id="reviews">
     <div class="container">
       <div class="section-title">
@@ -863,6 +857,10 @@
         <div class="review-card"><div class="stars">★★★★★</div><p><strong>Excellent hub for learning</strong></p><p>Valuable knowledge, reward system motivates.</p><small>23 Jan 2024</small></div>
         <div class="review-card"><div class="stars">★★★★☆</div><p><strong>Learn and Earn Community</strong></p><p>Enjoy being part of this community. Fun incentives!</p><small>5 Jan 2024</small></div>
       </div>
+      <!-- Trustpilot link as requested -->
+      <p style="text-align:center; margin-top:30px;">
+        <a href="https://uk.trustpilot.com/review/itreader.com?utm_medium=trustbox&utm_source=TrustBoxReviewCollector" target="_blank" style="color:var(--accent-color); font-weight:600; text-decoration:none; border-bottom:2px solid var(--accent-light); padding-bottom:2px;">View all reviews on Trustpilot →</a>
+      </p>
     </div>
   </section>
 
@@ -907,24 +905,21 @@
       icon.classList.toggle('fa-times');
     });
 
-    // ========== PERSISTENT DARK MODE with localStorage ==========
+    // Persistent dark mode with localStorage
     const toggle = document.getElementById('themeToggle');
     const body = document.body;
 
-    // Check localStorage for saved theme
     const savedTheme = localStorage.getItem('itreader-theme');
     if (savedTheme === 'dark') {
       body.classList.add('dark-mode');
       toggle.innerHTML = '<i class="fa-regular fa-sun"></i> <span>Light</span>';
     } else {
-      // default light (no dark class)
       toggle.innerHTML = '<i class="fa-regular fa-moon"></i> <span>Dark</span>';
     }
 
     toggle.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
       const isDark = body.classList.contains('dark-mode');
-      // update button text and icon
       if (isDark) {
         toggle.innerHTML = '<i class="fa-regular fa-sun"></i> <span>Light</span>';
         localStorage.setItem('itreader-theme', 'dark');
