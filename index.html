@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>ITreader — earn rewards while you learn</title>
-  <link rel="icon" type="x-icon" href="it reader logo">
+  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <!-- GSAP & ScrollTrigger -->
@@ -46,25 +46,26 @@
       --fs-h4: 1.2rem;
     }
 
+    /* ===== PURE DARK MODE – no purple/violet ===== */
     body.dark-mode {
-      --primary-color: #B6A2F0;
-      --primary-dark: #9A82E0;
-      --secondary-color: #6CB0E0;
-      --secondary-light: #8AC2F0;
-      --accent-color: #9A7AFF;
-      --accent-light: #B69EFF;
-      --light-color: #1A1728;
-      --light-gray: #252133;
-      --dark-color: #EDEAF9;
-      --gray-color: #B9B0D9;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-      --bg: #0F0C1A;
-      --surface: #1B1728;
-      --text-primary: #EDEAF9;
-      --text-secondary: #C9C0E9;
-      --border-light: #332D47;
-      --card-bg: #1F1B30;
-      background-color: #0F0C1A;
+      --primary-color: #3a80d2;        /* clean blue */
+      --primary-dark: #1a4b8c;
+      --secondary-color: #4f9fdb;
+      --secondary-light: #7bb8e8;
+      --accent-color: #9147ff;          /* minimal accent, but toggle is pure */
+      --accent-light: #b57cff;
+      --light-color: #1a1a1a;            
+      --light-gray: #232323;             
+      --dark-color: #f0f0f0;             
+      --gray-color: #aaaaaa;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+      --bg: #121212;                      /* pure dark background */
+      --surface: #1e1e1e;                 
+      --text-primary: #ffffff;
+      --text-secondary: #cccccc;
+      --border-light: #333333;
+      --card-bg: #1e1e1e;
+      background-color: #121212 !important;
     }
 
     body {
@@ -166,7 +167,7 @@
       color: white;
     }
 
-    /* ========== REFINED NAVBAR ========== */
+    /* ========== NAVBAR ========== */
     header {
       background-color: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
@@ -178,7 +179,7 @@
       transition: var(--transition);
     }
     body.dark-mode header {
-      background-color: rgba(20, 17, 40, 0.95);
+      background-color: rgba(18, 18, 18, 0.95) !important;
     }
     .header-container {
       display: flex;
@@ -258,15 +259,16 @@
       border-width: 2px;
     }
     body.dark-mode nav ul li a:not(.btn) {
-      color: var(--dark-color);
+      color: #f0f0f0;
     }
 
+    /* ----- DARK MODE TOGGLE — PURE DARK (no purple) ----- */
     .theme-toggle {
       background: none;
-      border: 1.5px solid var(--accent-color);
+      border: 1.5px solid #555;        /* neutral gray border */
       border-radius: 40px;
       padding: 6px 16px;
-      color: var(--accent-color);
+      color: #333;                      /* dark icon/text in light mode */
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -277,7 +279,16 @@
       margin-left: 6px;
     }
     .theme-toggle:hover {
-      background-color: var(--accent-color);
+      background-color: #e0e0e0;
+      border-color: #333;
+    }
+    body.dark-mode .theme-toggle {
+      border-color: #777;
+      color: #ddd;
+    }
+    body.dark-mode .theme-toggle:hover {
+      background-color: #2a2a2a;
+      border-color: #aaa;
       color: white;
     }
 
@@ -290,7 +301,7 @@
       cursor: pointer;
     }
 
-    /* ===== HERO ===== */
+    /* ===== HERO – ABSTRACT MOVING BACKGROUND ===== */
     .hero {
       position: relative;
       color: white;
@@ -298,43 +309,89 @@
       padding: 160px 0 100px;
       margin-top: 70px;
       isolation: isolate;
+      overflow: hidden;
+      background: #0A2463;  /* fallback */
     }
 
-    .hero::before {
-      content: "";
+    /* moving abstract shapes */
+    .hero-bg-shapes {
       position: absolute;
       inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=2069&q=80');
-      background-size: cover;
-      background-position: center 20%;
-      transform: scale(1.8);
-      transform-origin: center;
-      z-index: -2;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .hero-bg-shapes span {
+      position: absolute;
+      display: block;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      animation: float 20s infinite ease-in-out;
+    }
+    .hero-bg-shapes span:nth-child(1) {
+      top: -100px;
+      left: -100px;
+      width: 500px;
+      height: 500px;
+      background: rgba(255,255,255,0.02);
+      animation-duration: 25s;
+    }
+    .hero-bg-shapes span:nth-child(2) {
+      bottom: -150px;
+      right: -80px;
+      width: 600px;
+      height: 600px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 60% 40% 40% 60% / 60% 40% 60% 40%;
+      animation-duration: 30s;
+      animation-delay: -5s;
+    }
+    .hero-bg-shapes span:nth-child(3) {
+      top: 30%;
+      left: 20%;
+      width: 200px;
+      height: 200px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+      animation-duration: 18s;
+      animation-delay: -2s;
+    }
+    .hero-bg-shapes span:nth-child(4) {
+      bottom: 20%;
+      right: 20%;
+      width: 250px;
+      height: 250px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 50% 50% 30% 70% / 40% 40% 60% 60%;
+      animation-duration: 22s;
+      animation-delay: -8s;
+    }
+    @keyframes float {
+      0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+      33% { transform: translate(30px, -30px) rotate(120deg) scale(1.1); }
+      66% { transform: translate(-20px, 20px) rotate(240deg) scale(0.9); }
+      100% { transform: translate(0, 0) rotate(360deg) scale(1); }
     }
 
-    .hero h1, .hero p {
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    body.dark-mode .hero {
+      background: #0a0a0a;
     }
-
     .hero h1 {
       font-size: 2.6rem;
       margin-bottom: 15px;
       position: relative;
+      text-shadow: 0 2px 15px rgba(0,0,0,0.5);
     }
     .hero p {
       font-size: 1rem;
       max-width: 700px;
       margin: 0 auto 30px;
-      opacity: 1;
+      opacity: 0.95;
       position: relative;
     }
     .hero-buttons {
       position: relative;
-    }
-    @media (min-width: 2000px) {
-      .hero::before {
-        transform: scale(2.2);
-      }
     }
 
     /* features grid */
@@ -502,6 +559,11 @@
       box-shadow: 0 25px 35px rgba(0,0,0,0.35), 0 0 0 6px #3a3a4a;
       border: 2px solid #5f5f7a;
     }
+    body.dark-mode .iphone-mock {
+      background: #111;
+      box-shadow: 0 25px 35px rgba(0,0,0,0.8), 0 0 0 6px #2a2a2a;
+      border: 2px solid #444;
+    }
     .iphone-dynamic-island {
       background: #111;
       width: 100px;
@@ -540,6 +602,9 @@
       color: white;
       padding: 60px 0;
     }
+    body.dark-mode .stats {
+      background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+    }
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -552,6 +617,9 @@
       border-radius: 28px;
       padding: 25px 12px;
       border: 1px solid rgba(101,25,233,0.3);
+    }
+    body.dark-mode .stat-item {
+      border: 1px solid #333;
     }
     .stat-number {
       font-size: 2.6rem;
@@ -594,6 +662,9 @@
       background: var(--primary-dark);
       color: white;
       padding: 45px 0 20px;
+    }
+    body.dark-mode .footer {
+      background: #0a0a0a;
     }
     .footer-grid {
       display: grid;
@@ -664,7 +735,6 @@
       .stats-grid { grid-template-columns: 1fr; }
       .hero { padding: 140px 0 80px; }
       .hero h1 { font-size: 2rem; }
-      .hero::before { transform: scale(1.5); }
     }
 
     @media (max-width: 480px) {
@@ -681,7 +751,6 @@
       .gift-badge i { font-size: 3rem; }
       .gift-badge span { font-size: 1.2rem; }
       .iphone-mock { max-width: 260px; }
-      .hero::before { transform: scale(1.5); }
     }
 
     @media (max-height: 700px) {
@@ -702,8 +771,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#who">Who we are</a></li>
           <li><a href="#why">Why join</a></li>
-          <!-- Contact Us button now links to contact.html -->
-          <li><a href="contact.html" class="btn btn-outline" target="_blanke">Contact Us</a></li>
+          <li><a href="contact.html" class="btn btn-outline">Contact Us</a></li>
           <li><a href="#" class="btn btn-accent">Events</a></li>
           <li><button class="theme-toggle" id="themeToggle"><i class="fa-regular fa-moon"></i> <span>Dark</span></button></li>
         </ul>
@@ -711,8 +779,11 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero with ABSTRACT MOVING BACKGROUND -->
   <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <span></span><span></span><span></span><span></span>
+    </div>
     <div class="container">
       <h1>Earn rewards <span style="color:var(--accent-light);">while you learn</span></h1>
       <p>Join our professional community, influence new tech, and enhance your expertise with webinars, eBooks, surveys, interviews, and more. Chance to win digital Tango Gift Cards.</p>
@@ -864,7 +935,7 @@
     </div>
   </section>
 
-  <!-- Contact CTA (in-page anchor) -->
+  <!-- Contact CTA -->
   <section id="contact" style="background: var(--light-gray); padding: 50px 0;">
     <div class="container">
       <div style="text-align: center; max-width: 500px; margin: 0 auto;">
@@ -905,7 +976,7 @@
       icon.classList.toggle('fa-times');
     });
 
-    // Persistent dark mode
+    // Persistent dark mode with pure dark colors
     const toggle = document.getElementById('themeToggle');
     const body = document.body;
 
@@ -929,7 +1000,7 @@
       }
     });
 
-    // Smooth scroll for internal links (hash links)
+    // Smooth scroll for internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -982,4 +1053,3 @@
   </script>
 </body>
 </html>
-
