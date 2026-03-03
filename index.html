@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>ITreader — earn rewards & corporate events</title>
-  <link rel="icon" type="png" sizes="64x64" href="it reader logo.png">
+ <link rel="icon" type="png" sizes="64x64" href="it reader logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <!-- GSAP & ScrollTrigger -->
@@ -761,6 +761,29 @@
       margin-top: 25px;
     }
 
+    /* social footer icons */
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      color: white;
+      font-size: 1.2rem;
+      transition: var(--transition);
+    }
+    .footer-social a:hover {
+      background: var(--accent-color);
+      transform: translateY(-3px);
+    }
+
     /* responsive */
     @media (max-width: 1100px) {
       :root {
@@ -846,7 +869,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#who">Who we are</a></li>
           <li><a href="#why">Why join</a></li>
-          <li><a href="contact.html" class="btn btn-outline" target="_blanke">Contact Us</a></li>
+          <li><a href="contact.html" class="btn btn-outline" Target="_blanke">Contact Us</a></li>
           <li><a href="#" class="btn btn-accent">Events</a></li>
           <li><button class="theme-toggle" id="themeToggle"><i class="fa-regular fa-moon"></i> <span>Dark</span></button></li>
         </ul>
@@ -888,7 +911,7 @@
         <div class="who-illustration">
           <div class="gift-badge">
             <i class="fas fa-gift"></i>
-            <span>100+ gifts</span>  <!-- changed from "100+ retailers" -->
+            <span>100+ gifts</span>
             <small style="font-size:0.9rem;">& rewards</small>
           </div>
         </div>
@@ -956,6 +979,10 @@
               <h4>Influence tech</h4>
               <p>Shape new products via interviews.</p>
             </div>
+          </div>
+          <div class="tango-summary" style="background:var(--light-gray); padding:22px; border-radius:var(--border-radius);">
+            <h4 style="color:var(--accent-color);">About rewards</h4>
+            <p>Digital gift cards for 1000+ retailers. If you win, you’ll receive a reward link within two days.</p>
           </div>
         </div>
         <div>
@@ -1028,7 +1055,7 @@
             <li><i class="fas fa-check-circle"></i> Budget Management: Transparent financial oversight</li>
             <li><i class="fas fa-check-circle"></i> ROI Tracking: Measurement of event success metrics</li>
           </ul>
-          <a href="contact.html" class="btn btn-accent event-btn" target="_blanke">Inquire About Corporate Events</a>
+          <a href="contact.html" class="btn btn-accent event-btn" Target="_blanke">Inquire About Corporate Events</a>
         </div>
 
         <!-- Executive Networking card -->
@@ -1043,7 +1070,7 @@
             <li><i class="fas fa-check-circle"></i> Follow-up Support: Connection facilitation post-event</li>
             <li><i class="fas fa-check-circle"></i> Exclusive Venues: Premium locations for high-level networking</li>
           </ul>
-          <a  href="contact.html" class="btn btn-accent event-btn"  target="_blanke">Plan a Networking Event</a>
+          <a href="contact.html" class="btn btn-accent event-btn" Target="_blanke">Plan a Networking Event</a>
         </div>
 
         <!-- Strategic Event Consulting card -->
@@ -1058,7 +1085,7 @@
             <li><i class="fas fa-check-circle"></i> Sustainability Planning: Eco-friendly event strategies</li>
             <li><i class="fas fa-check-circle"></i> Crisis Management: Risk assessment and contingency planning</li>
           </ul>
-          <a  href="contact.html" class="btn btn-accent event-btn"  target="_blanke">Schedule a Consultation</a>
+          <a href="contact.html" class="btn btn-accent event-btn" Target="_blanke">Schedule a Consultation</a>
         </div>
       </div>
 
@@ -1104,19 +1131,44 @@
     <div class="container">
       <div style="text-align: center; max-width: 500px; margin: 0 auto;">
         <h2 style="color: var(--primary-color);">Join ITreader today</h2>
-        <p style="margin-bottom: 25px;"  href="contact.html"   target="_blanke">Join Us</p>
-        <a  href="contact.html" class="btn btn-accent" target="_blanke">Contact Us</a>
+        <p style="margin-bottom: 25px;" href="contact.html" Target="_blanke">Join US.</p>
+        <a href="contact.html" class="btn btn-accent" Target="_blanke">Contact us</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer with social media icons and links -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div><h4>ITreader</h4><p>44 St Peter's St Canterbury CT1 2BG<br>hello@itreader.com</p></div>
-        <div><h4>Explore</h4><ul style="list-style:none;"><li><a href="index.html">Home</a></li><li><a href="#who">Who we are</a></li><li><a href="#why">Why join</a></li><li><a href="#events">Events</a></li></ul></div>
-        <div><h4>Legal</h4><ul style="list-style:none;"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div>
+        <div>
+          <h4>ITreader</h4>
+          <p>44 St Peter's St Canterbury CT1 2BG<br>hello@itreader.com</p>
+          <!-- Social icons added here -->
+          <div class="footer-social">
+            <a href="https://www.youtube.com/@ITreader" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/itreader1/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://101webstudio.github.io/ITreader/" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a>
+            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul style="list-style:none;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#who">Who we are</a></li>
+            <li><a href="#why">Why join</a></li>
+            <li><a href="#events">Events</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul style="list-style:none;">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
       </div>
       <div class="myoutreach-credit">
         <p style="display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap;">
@@ -1215,6 +1267,3 @@
   </script>
 </body>
 </html>
-
-
-
