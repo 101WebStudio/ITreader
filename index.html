@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>ITreader — earn rewards while you learn</title>
-  <!-- Font Awesome 6 -->
+  <title>ITreader — earn rewards & corporate events</title>
+  <link rel="icon" type="x-icon" href="it reader logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <!-- GSAP & ScrollTrigger -->
@@ -52,7 +52,7 @@
       --primary-dark: #1a4b8c;
       --secondary-color: #4f9fdb;
       --secondary-light: #7bb8e8;
-      --accent-color: #9147ff;          /* minimal accent, but toggle is pure */
+      --accent-color: #9147ff;          /* minimal accent */
       --accent-light: #b57cff;
       --light-color: #1a1a1a;            
       --light-gray: #232323;             
@@ -262,13 +262,13 @@
       color: #f0f0f0;
     }
 
-    /* ----- DARK MODE TOGGLE — PURE DARK (no purple) ----- */
+    /* ----- DARK MODE TOGGLE — PURE DARK ----- */
     .theme-toggle {
       background: none;
-      border: 1.5px solid #555;        /* neutral gray border */
+      border: 1.5px solid #555;
       border-radius: 40px;
       padding: 6px 16px;
-      color: #333;                      /* dark icon/text in light mode */
+      color: #333;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -310,10 +310,9 @@
       margin-top: 70px;
       isolation: isolate;
       overflow: hidden;
-      background: #0A2463;  /* fallback */
+      background: #0A2463;
     }
 
-    /* moving abstract shapes */
     .hero-bg-shapes {
       position: absolute;
       inset: 0;
@@ -657,6 +656,83 @@
       font-size: 1.1rem;
     }
 
+    /* ===== NEW EVENTS SECTION – FULL DETAILS ===== */
+    .events-showcase {
+      background: var(--light-gray);
+    }
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    .event-card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 35px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-light);
+      transition: transform 0.3s;
+    }
+    .event-card:hover {
+      transform: translateY(-5px);
+    }
+    .event-card h3 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+    .event-card p {
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .event-list {
+      list-style: none;
+      margin: 20px 0;
+    }
+    .event-list li {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .event-list i {
+      color: var(--accent-color);
+      width: 24px;
+      font-size: 1.1rem;
+    }
+    .event-btn {
+      margin-top: 20px;
+    }
+
+    /* additional services grid (6 items) */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin: 40px 0 20px;
+    }
+    .service-item {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 25px;
+      border: 1px solid var(--border-light);
+    }
+    .service-item i {
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin-bottom: 15px;
+    }
+    .service-item h4 {
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+    .service-item p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
     /* footer */
     .footer {
       background: var(--primary-dark);
@@ -692,9 +768,7 @@
         --fs-h2: 1.9rem;
         --fs-h3: 1.4rem;
       }
-      nav ul {
-        gap: 20px;
-      }
+      nav ul { gap: 20px; }
     }
 
     @media (max-width: 992px) {
@@ -703,6 +777,7 @@
       .review-grid { grid-template-columns: repeat(2, 1fr); }
       .who-grid { grid-template-columns: 1fr; }
       .who-illustration { order: -1; margin-bottom: 20px; }
+      .event-grid, .services-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 768px) {
@@ -935,6 +1010,99 @@
     </div>
   </section>
 
+  <!-- ===== NEW EVENTS SECTION ===== -->
+  <section class="events-showcase" id="events">
+    <div class="container">
+      <div class="section-title">
+        <h2>Corporate Event Planning</h2>
+        <p>From product launches to annual conferences, we design and execute events that align with your brand identity and business objectives, ensuring seamless experiences that exceed expectations.</p>
+      </div>
+      
+      <!-- main event cards (3) -->
+      <div class="event-grid">
+        <!-- Corporate Event Planning card -->
+        <div class="event-card">
+          <h3>Corporate Event Planning</h3>
+          <p>From product launches to annual conferences, we design and execute events that align with your brand identity and business objectives, ensuring seamless experiences that exceed expectations.</p>
+          <p>Our team specializes in creating corporate events that not only impress but also deliver measurable results.</p>
+          <ul class="event-list">
+            <li><i class="fas fa-check-circle"></i> Full-Service Planning: End-to-end event management</li>
+            <li><i class="fas fa-check-circle"></i> Brand Integration: Seamless brand representation</li>
+            <li><i class="fas fa-check-circle"></i> Vendor Management: Coordination of all suppliers</li>
+            <li><i class="fas fa-check-circle"></i> Budget Management: Transparent financial oversight</li>
+            <li><i class="fas fa-check-circle"></i> ROI Tracking: Measurement of event success metrics</li>
+          </ul>
+          <a href="#" class="btn btn-accent event-btn">Inquire About Corporate Events</a>
+        </div>
+
+        <!-- Executive Networking card -->
+        <div class="event-card">
+          <h3>Executive Networking</h3>
+          <p>Strategic gatherings designed to connect industry leaders, decision-makers, and influencers. We create environments for meaningful business relationships that drive growth and opportunity.</p>
+          <p>Our networking events are carefully curated to bring together the right people in settings that encourage genuine connections.</p>
+          <ul class="event-list">
+            <li><i class="fas fa-check-circle"></i> Targeted Invitations: Curated guest lists</li>
+            <li><i class="fas fa-check-circle"></i> Strategic Matchmaking: Connecting complementary professionals</li>
+            <li><i class="fas fa-check-circle"></i> Industry-Specific Events: Sector-focused gatherings</li>
+            <li><i class="fas fa-check-circle"></i> Follow-up Support: Connection facilitation post-event</li>
+            <li><i class="fas fa-check-circle"></i> Exclusive Venues: Premium locations for high-level networking</li>
+          </ul>
+          <a href="#" class="btn btn-accent event-btn">Plan a Networking Event</a>
+        </div>
+
+        <!-- Strategic Event Consulting card -->
+        <div class="event-card">
+          <h3>Strategic Event Consulting</h3>
+          <p>Expert guidance on event strategy, audience engagement, and ROI measurement. We ensure your events deliver tangible business results and strengthen your organization's market position.</p>
+          <p>Our consulting services help organizations develop event strategies that align with broader business goals.</p>
+          <ul class="event-list">
+            <li><i class="fas fa-check-circle"></i> Event Strategy Development: Comprehensive planning frameworks</li>
+            <li><i class="fas fa-check-circle"></i> Audience Analysis: Understanding attendee motivations</li>
+            <li><i class="fas fa-check-circle"></i> Technology Integration: Implementing event tech solutions</li>
+            <li><i class="fas fa-check-circle"></i> Sustainability Planning: Eco-friendly event strategies</li>
+            <li><i class="fas fa-check-circle"></i> Crisis Management: Risk assessment and contingency planning</li>
+          </ul>
+          <a href="#" class="btn btn-accent event-btn">Schedule a Consultation</a>
+        </div>
+      </div>
+
+      <!-- Additional Services -->
+      <h3 style="text-align:center; margin: 50px 0 30px; color:var(--primary-color);">Additional Services</h3>
+      <div class="services-grid">
+        <div class="service-item">
+          <i class="fas fa-microphone-alt"></i>
+          <h4>Speaker Management</h4>
+          <p>Comprehensive speaker coordination including sourcing, contracting, briefing, and logistics for your event's presenters and panelists.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-video"></i>
+          <h4>Hybrid Event Production</h4>
+          <p>Seamless integration of in-person and virtual components to extend your event's reach and accessibility.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-chart-line"></i>
+          <h4>Post-Event Analysis</h4>
+          <p>Comprehensive reporting and analysis to measure ROI, gather attendee feedback, and inform future event strategies.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-users"></i>
+          <h4>Team Building Events</h4>
+          <p>Customized team building activities designed to strengthen collaboration, communication, and company culture.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-trophy"></i>
+          <h4>Award Ceremonies</h4>
+          <p>Prestigious award ceremonies that recognize achievement and excellence within your organization or industry.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-globe"></i>
+          <h4>International Events</h4>
+          <p>Global event management with expertise in cross-cultural communication, international logistics, and multilingual support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact CTA -->
   <section id="contact" style="background: var(--light-gray); padding: 50px 0;">
     <div class="container">
@@ -952,7 +1120,7 @@
     <div class="container">
       <div class="footer-grid">
         <div><h4>ITreader</h4><p>44 St Peter's St Canterbury CT1 2BG<br>hello@itreader.com</p></div>
-        <div><h4>Explore</h4><ul style="list-style:none;"><li><a href="index.html">Home</a></li><li><a href="#who">Who we are</a></li><li><a href="#why">Why join</a></li></ul></div>
+        <div><h4>Explore</h4><ul style="list-style:none;"><li><a href="index.html">Home</a></li><li><a href="#who">Who we are</a></li><li><a href="#why">Why join</a></li><li><a href="#events">Events</a></li></ul></div>
         <div><h4>Legal</h4><ul style="list-style:none;"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div>
       </div>
       <div class="myoutreach-credit">
@@ -1053,5 +1221,3 @@
   </script>
 </body>
 </html>
-
-
