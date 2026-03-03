@@ -946,16 +946,154 @@
     </div>
   </section>
 
-  <!-- Partners carousel -->
   <section class="partner-section">
     <div class="container">
-      <h2 style="text-align:center; margin-bottom:20px; font-size:1.8rem;">Trusted by <span style="color:var(--accent-color);">global partners</span></h2>
-      <div class="carousel">
-        <div class="carousel-track">
-          <span class="partner-item"><i class="fab fa-ibm"></i> IBM</span><span class="partner-item"><i class="fas fa-microchip"></i> Intel</span><span class="partner-item"><i class="fab fa-google"></i> Google</span><span class="partner-item"><i class="fas fa-cube"></i> Flexera</span><span class="partner-item"><i class="fas fa-cloud"></i> Twilio</span><span class="partner-item"><i class="fas fa-chart-line"></i> TIBC</span><span class="partner-item"><i class="fas fa-industry"></i> Siemens</span>
-          <span class="partner-item"><i class="fab fa-ibm"></i> IBM</span><span class="partner-item"><i class="fas fa-microchip"></i> Intel</span><span class="partner-item"><i class="fab fa-google"></i> Google</span><span class="partner-item"><i class="fas fa-cube"></i> Flexera</span><span class="partner-item"><i class="fas fa-cloud"></i> Twilio</span><span class="partner-item"><i class="fas fa-chart-line"></i> TIBC</span><span class="partner-item"><i class="fas fa-industry"></i> Siemens</span>
+      <h2 style="text-align:center; margin-bottom:30px; font-size:1.8rem;">Trusted by <span style="color: #0018ff;">global partners</span></h2>
+      
+      <!-- First moving row - faster animation (15s instead of 30s) -->
+      <div class="carousel" style="overflow: hidden; width: 100%; padding: 10px 0;">
+        <div class="carousel-track" style="display: flex; gap: 30px; width: max-content; animation: slide 15s linear infinite;">
+          
+          <!-- Row 1 items - larger logos, no text, paths in /images/ -->
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imagetibc.png" alt="TIBCO logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imageGC.png" alt="Google Cloud logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imagequest.png" alt="Quest logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imageleapwork.png" alt="leapwork logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imageplanview.png" alt="planview logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imagetwilio.png" alt="twilio logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imagesiemens.png" alt="Siemens logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imageibm.png" alt="IBM logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imageflecera.png" alt="flexera logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imagemastercar.png" alt="Mastercard logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <!-- Duplicate for seamless loop -->
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imagemastercar.png" alt="Mastercard logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imageGC.png" alt="Google Cloud logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
         </div>
       </div>
+      
+      <!-- Second moving row (opposite direction) - faster animation -->
+      <div class="carousel" style="overflow: hidden; width: 100%; padding: 10px 0; margin-top: 20px;">
+        <div class="carousel-track" style="display: flex; gap: 30px; width: max-content; animation: slideReverse 15s linear infinite;">
+          
+          <!-- Row 2 items - larger logos, no text, paths in /images/ -->
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imagequest.png" alt="Quest logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imageleapwork.png" alt="leapwork logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imageplanview.png" alt="planview logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imagetwilio.png" alt="twilio logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imagesiemens.png" alt="Siemens logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imageibm.png" alt="IBM logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imageflecera.png" alt="flexera logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imagemastercar.png" alt="Mastercard logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imageGC.png" alt="Google Cloud logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imagequest.png" alt="Quest logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <!-- Duplicate for seamless loop -->
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imageleapwork.png" alt="leapwork logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+          
+          <div class="partner-item" style="display: flex; align-items: center; justify-content: center; width: 160px; height: 160px; background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--border-light); padding: 25px; transition: all 0.3s ease;">
+            <img src="/images/imageplanview.png" alt="planview logo" class="partner-logo" style="width: 100px; height: 100px; object-fit: contain; filter: brightness(1) contrast(1); transition: filter 0.3s ease;">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Dark mode specific adjustments for images - now white -->
+      <style>
+        /* Make all partner logos white in dark mode */
+        body.dark-mode .partner-logo {
+          filter: brightness(0) invert(1) !important;
+          opacity: 1;
+        }
+        
+        /* Hover effect for better visibility */
+        .partner-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0, 24, 255, 0.2);
+          border-color: #0018ff;
+        }
+        
+        /* Ensure logos look good in light mode */
+        .partner-logo {
+          transition: filter 0.3s ease;
+        }
+      </style>
+      
+      <!-- Keyframes for sliding animations - faster -->
+      <style>
+        @keyframes slide {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        @keyframes slideReverse {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
+        }
+      </style>
     </div>
   </section>
 
@@ -1145,8 +1283,8 @@
             <a href="https://www.youtube.com/@ITreader" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             <a href="https://www.facebook.com/itreader1/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="https://101webstudio.github.io/ITreader/" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a>
-            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/_itreader?igsh=MTNjY3pudHZtd21mYw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/itreader/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
         <div>
@@ -1263,6 +1401,7 @@
   </script>
 </body>
 </html>
+
 
 
 
