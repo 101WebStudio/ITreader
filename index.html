@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>ITreader — earn rewards while you learn</title>
-  <link rel="icon" type="x-icon" href="it reader logo.png">
+  <link rel="icon" type="x-icon" href="it reader logo">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <!-- GSAP & ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <style> * {
+  <style>
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -165,7 +166,7 @@
       color: white;
     }
 
-    /* ========== REFINED NAVBAR for LAPTOP ========== */
+    /* ========== REFINED NAVBAR ========== */
     header {
       background-color: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
@@ -685,12 +686,13 @@
 
     @media (max-height: 700px) {
       .iphone-screen { height: 400px; }
-    }</style>
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="container header-container">
-      <a href="#" class="logo">
+      <a href="index.html" class="logo">
         <img src="it reader logo.png" alt="ITreader logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
         <div class="logo-text" style="display:inline-block;">ITreader<span>learn & earn</span></div>
       </a>
@@ -700,7 +702,8 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#who">Who we are</a></li>
           <li><a href="#why">Why join</a></li>
-          <li><a href="#contact" class="btn btn-outline">Contact Us</a></li>
+          <!-- Contact Us button now links to contact.html -->
+          <li><a href="contact.html" class="btn btn-outline">Contact Us</a></li>
           <li><a href="#" class="btn btn-accent">Events</a></li>
           <li><button class="theme-toggle" id="themeToggle"><i class="fa-regular fa-moon"></i> <span>Dark</span></button></li>
         </ul>
@@ -843,7 +846,7 @@
     </div>
   </section>
 
-  <!-- Trustpilot reviews with the exact link -->
+  <!-- Trustpilot reviews -->
   <section class="trustpilot-reviews" id="reviews">
     <div class="container">
       <div class="section-title">
@@ -855,14 +858,13 @@
         <div class="review-card"><div class="stars">★★★★★</div><p><strong>Excellent hub for learning</strong></p><p>Valuable knowledge, reward system motivates.</p><small>23 Jan 2024</small></div>
         <div class="review-card"><div class="stars">★★★★☆</div><p><strong>Learn and Earn Community</strong></p><p>Enjoy being part of this community. Fun incentives!</p><small>5 Jan 2024</small></div>
       </div>
-      <!-- Trustpilot link as requested -->
       <p style="text-align:center; margin-top:30px;">
         <a href="https://uk.trustpilot.com/review/itreader.com?utm_medium=trustbox&utm_source=TrustBoxReviewCollector" target="_blank" style="color:var(--accent-color); font-weight:600; text-decoration:none; border-bottom:2px solid var(--accent-light); padding-bottom:2px;">View all reviews on Trustpilot →</a>
       </p>
     </div>
   </section>
 
-  <!-- Contact CTA -->
+  <!-- Contact CTA (in-page anchor) -->
   <section id="contact" style="background: var(--light-gray); padding: 50px 0;">
     <div class="container">
       <div style="text-align: center; max-width: 500px; margin: 0 auto;">
@@ -879,7 +881,7 @@
     <div class="container">
       <div class="footer-grid">
         <div><h4>ITreader</h4><p>44 St Peter's St Canterbury CT1 2BG<br>hello@itreader.com</p></div>
-        <div><h4>Explore</h4><ul style="list-style:none;"><li><a href="#">Home</a></li><li><a href="#who">Who we are</a></li><li><a href="#why">Why join</a></li></ul></div>
+        <div><h4>Explore</h4><ul style="list-style:none;"><li><a href="index.html">Home</a></li><li><a href="#who">Who we are</a></li><li><a href="#why">Why join</a></li></ul></div>
         <div><h4>Legal</h4><ul style="list-style:none;"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div>
       </div>
       <div class="myoutreach-credit">
@@ -894,7 +896,8 @@
     </div>
   </footer>
 
-  <script>// Mobile menu
+  <script>
+    // Mobile menu
     document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
       document.querySelector('nav ul').classList.toggle('active');
       const icon = this.querySelector('i');
@@ -902,7 +905,7 @@
       icon.classList.toggle('fa-times');
     });
 
-    // Persistent dark mode with localStorage
+    // Persistent dark mode
     const toggle = document.getElementById('themeToggle');
     const body = document.body;
 
@@ -926,7 +929,7 @@
       }
     });
 
-    // Smooth scroll
+    // Smooth scroll for internal links (hash links)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -975,11 +978,7 @@
         },
         once: true
       });
-    });</script>
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
