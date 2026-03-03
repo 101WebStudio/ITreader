@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>ITreader — earn rewards & corporate events</title>
-  <link rel="icon" type="x-icon" href="it reader logo.png">
+  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <!-- GSAP & ScrollTrigger -->
@@ -198,7 +198,7 @@
       transform: scale(1.02);
     }
     .logo-img {
-      height: 60px;
+      height: 44px;
       width: auto;
       margin-right: 10px;
       border-radius: 8px;
@@ -656,7 +656,7 @@
       font-size: 1.1rem;
     }
 
-    /* ===== NEW EVENTS SECTION – FULL DETAILS ===== */
+    /* ===== EVENTS SECTION ===== */
     .events-showcase {
       background: var(--light-gray);
     }
@@ -861,7 +861,7 @@
     </div>
     <div class="container">
       <h1>Earn rewards <span style="color:var(--accent-light);">while you learn</span></h1>
-      <p>Join our professional community, influence new tech, and enhance your expertise with webinars, eBooks, surveys, interviews, and more. Chance to win digital Tango Gift Cards.</p>
+      <p>Join our professional community, influence new tech, and enhance your expertise with webinars, eBooks, surveys, interviews, and more. Chance to win digital gift cards.</p>
       <div class="hero-buttons">
         <a href="#contact" class="btn btn-accent">Start earning <i class="fas fa-gift"></i></a>
         <a href="#who" class="btn btn-secondary">Explore <i class="fas fa-arrow-down"></i></a>
@@ -888,8 +888,8 @@
         <div class="who-illustration">
           <div class="gift-badge">
             <i class="fas fa-gift"></i>
-            <span>100+ retailers</span>
-            <small style="font-size:0.9rem;">Tango Card</small>
+            <span>100+ gifts</span>  <!-- changed from "100+ retailers" -->
+            <small style="font-size:0.9rem;">& rewards</small>
           </div>
         </div>
       </div>
@@ -1006,7 +1006,7 @@
     </div>
   </section>
 
-  <!-- ===== NEW EVENTS SECTION ===== -->
+  <!-- ===== EVENTS SECTION (all buttons link to #contact) ===== -->
   <section class="events-showcase" id="events">
     <div class="container">
       <div class="section-title">
@@ -1028,7 +1028,7 @@
             <li><i class="fas fa-check-circle"></i> Budget Management: Transparent financial oversight</li>
             <li><i class="fas fa-check-circle"></i> ROI Tracking: Measurement of event success metrics</li>
           </ul>
-          <a href="#" class="btn btn-accent event-btn">Inquire About Corporate Events</a>
+          <a href="#contact" class="btn btn-accent event-btn">Inquire About Corporate Events</a>
         </div>
 
         <!-- Executive Networking card -->
@@ -1043,7 +1043,7 @@
             <li><i class="fas fa-check-circle"></i> Follow-up Support: Connection facilitation post-event</li>
             <li><i class="fas fa-check-circle"></i> Exclusive Venues: Premium locations for high-level networking</li>
           </ul>
-          <a href="#" class="btn btn-accent event-btn">Plan a Networking Event</a>
+          <a href="#contact" class="btn btn-accent event-btn">Plan a Networking Event</a>
         </div>
 
         <!-- Strategic Event Consulting card -->
@@ -1058,7 +1058,7 @@
             <li><i class="fas fa-check-circle"></i> Sustainability Planning: Eco-friendly event strategies</li>
             <li><i class="fas fa-check-circle"></i> Crisis Management: Risk assessment and contingency planning</li>
           </ul>
-          <a href="#" class="btn btn-accent event-btn">Schedule a Consultation</a>
+          <a href="#contact" class="btn btn-accent event-btn">Schedule a Consultation</a>
         </div>
       </div>
 
@@ -1099,7 +1099,7 @@
     </div>
   </section>
 
-  <!-- Contact CTA -->
+  <!-- Contact CTA (target for all event buttons) -->
   <section id="contact" style="background: var(--light-gray); padding: 50px 0;">
     <div class="container">
       <div style="text-align: center; max-width: 500px; margin: 0 auto;">
@@ -1140,10 +1140,9 @@
       icon.classList.toggle('fa-times');
     });
 
-    // Persistent dark mode with pure dark colors
+    // Persistent dark mode
     const toggle = document.getElementById('themeToggle');
     const body = document.body;
-
     const savedTheme = localStorage.getItem('itreader-theme');
     if (savedTheme === 'dark') {
       body.classList.add('dark-mode');
@@ -1217,4 +1216,3 @@
   </script>
 </body>
 </html>
-
