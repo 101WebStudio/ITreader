@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>ITreader — Contact & events</title>
-  <link rel="icon" type="png" sizes="64x64" href="it reader logo.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="it reader logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -43,26 +43,26 @@
       --fs-h4: 1.2rem;
     }
 
-    /* ===== EXTREMELY STRONG DARK MODE – pure black/dark gray ===== */
+    /* ===== SOFTER DARK MODE – exactly like ITreader home section ===== */
     body.dark-mode {
-      --primary-color: #ffffff;         /* white for max contrast */
-      --primary-dark: #cccccc;
+      --primary-color: #3a80d2;        /* clean blue (from home) */
+      --primary-dark: #1a4b8c;
       --secondary-color: #4f9fdb;
       --secondary-light: #7bb8e8;
       --accent-color: #9147ff;
       --accent-light: #b57cff;
-      --light-color: #0a0a0a;           /* almost black */
-      --light-gray: #121212;             /* deep dark */
-      --dark-color: #f0f0f0;             /* light text */
+      --light-color: #1a1a1a;           /* dark gray, not pure black */
+      --light-gray: #232323;             /* softer dark */
+      --dark-color: #f0f0f0;
       --gray-color: #aaaaaa;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
-      --bg: #000000;                     /* pure black background */
-      --surface: #0a0a0a;                 
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      --bg: #121212;                     /* dark but not pure black */
+      --surface: #1e1e1e;
       --text-primary: #ffffff;
       --text-secondary: #dddddd;
-      --border-light: #222222;
-      --card-bg: #0a0a0a;
-      background-color: #000000 !important;
+      --border-light: #333333;
+      --card-bg: #1e1e1e;
+      background-color: #121212 !important;
     }
 
     body {
@@ -164,7 +164,7 @@
       color: white;
     }
 
-    /* ========== NAVBAR (same as home, clean) ========== */
+    /* ========== NAVBAR ========== */
     header {
       background-color: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
@@ -176,7 +176,7 @@
       transition: var(--transition);
     }
     body.dark-mode header {
-      background-color: rgba(0, 0, 0, 0.95) !important;
+      background-color: rgba(18, 18, 18, 0.95) !important;
     }
     .header-container {
       display: flex;
@@ -209,7 +209,7 @@
     }
     /* "learn & earn" removed – only ITreader */
     .logo-text span {
-      display: none;  /* hides the "learn & earn" text */
+      display: none;
     }
 
     nav ul {
@@ -456,83 +456,6 @@
       text-decoration: underline;
     }
 
-    /* ===== NEW EVENTS SECTION – full details ===== */
-    .events-showcase {
-      background: var(--light-gray);
-    }
-    .event-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      margin-bottom: 50px;
-    }
-    .event-card {
-      background: var(--card-bg);
-      border-radius: var(--border-radius);
-      padding: 35px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border-light);
-      transition: transform 0.3s;
-    }
-    .event-card:hover {
-      transform: translateY(-5px);
-    }
-    .event-card h3 {
-      font-size: 1.8rem;
-      color: var(--primary-color);
-      margin-bottom: 15px;
-    }
-    .event-card p {
-      color: var(--text-secondary);
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-    .event-list {
-      list-style: none;
-      margin: 20px 0;
-    }
-    .event-list li {
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .event-list i {
-      color: var(--accent-color);
-      width: 24px;
-      font-size: 1.1rem;
-    }
-    .event-btn {
-      margin-top: 20px;
-    }
-
-    /* additional services grid (6 items) */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      margin: 40px 0 20px;
-    }
-    .service-item {
-      background: var(--card-bg);
-      border-radius: var(--border-radius);
-      padding: 25px;
-      border: 1px solid var(--border-light);
-    }
-    .service-item i {
-      font-size: 2rem;
-      color: var(--accent-color);
-      margin-bottom: 15px;
-    }
-    .service-item h4 {
-      margin-bottom: 10px;
-      color: var(--primary-color);
-    }
-    .service-item p {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-    }
-
     /* footer */
     .footer {
       background: var(--primary-dark);
@@ -571,7 +494,7 @@
       nav ul { gap: 20px; }
     }
     @media (max-width: 992px) {
-      .contact-grid, .event-grid, .services-grid {
+      .contact-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -607,7 +530,7 @@
     <div class="container header-container">
       <a href="index.html" class="logo">
         <img src="it reader logo.png" alt="ITreader logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="logo-text">ITreader<!-- span removed --></div>
+        <div class="logo-text">ITreader</div>
       </a>
       <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
       <nav>
@@ -616,7 +539,8 @@
           <li><a href="index.html#who">Who we are</a></li>
           <li><a href="index.html#why">Why join</a></li>
           <li><a href="contact.html" class="btn btn-outline">Contact Us</a></li>
-          <li><a href="#" class="btn btn-accent">Events</a></li>
+          <!-- Events button now links to events.html with target="_blank" -->
+          <li><a href="events.html" class="btn btn-accent" target="_blank">Events</a></li>
           <li><button class="theme-toggle" id="themeToggle"><i class="fa-regular fa-moon"></i> <span>Dark</span></button></li>
         </ul>
       </nav>
@@ -630,7 +554,7 @@
     </div>
   </section>
 
-  <!-- CONTACT SECTION (Tango Card removed) -->
+  <!-- CONTACT SECTION -->
   <section>
     <div class="container">
       <div class="contact-grid">
@@ -649,7 +573,7 @@
             <div class="social-icons">
               <a href="https://www.facebook.com/itreader1/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
               <a href="https://www.youtube.com/@ITreader" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-              <a href="" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
               <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
           </div>
@@ -686,14 +610,30 @@
     </div>
   </section>
 
-
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div><h4>ITreader</h4><p>44 St Peter's St Canterbury CT1 2BG<br>hello@itreader.com</p></div>
-        <div><h4>Explore</h4><ul style="list-style:none;"><li><a href="index.html">Home</a></li><li><a href="index.html#who">Who we are</a></li><li><a href="index.html#why">Why join</a></li></ul></div>
-        <div><h4>Legal</h4><ul style="list-style:none;"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div>
+        <div>
+          <h4>ITreader</h4>
+          <p>44 St Peter's St Canterbury CT1 2BG<br>hello@itreader.com</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul style="list-style:none;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#who">Who we are</a></li>
+            <li><a href="index.html#why">Why join</a></li>
+            <li><a href="events.html" target="_blank">Events</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul style="list-style:none;">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
       </div>
       <div class="myoutreach-credit">
         <p style="display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap;">
@@ -716,7 +656,7 @@
       icon.classList.toggle('fa-times');
     });
 
-    // Persistent dark mode with pure black
+    // Persistent dark mode with softer dark (matching home)
     const toggle = document.getElementById('themeToggle');
     const body = document.body;
     const savedTheme = localStorage.getItem('itreader-theme');
