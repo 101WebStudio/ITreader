@@ -454,7 +454,7 @@
       gap: 8px;
     }
 
-    /* WHO WE ARE */
+    /* ===== WHO WE ARE - WITH LARGER EVENT IMAGE (1600x1066 optimized) ===== */
     .who-we-are {
       background-color: var(--light-gray);
     }
@@ -496,27 +496,50 @@
       color: var(--accent-color);        /* blue icon */
       width: 36px;
     }
-    .gift-badge {
-      background: linear-gradient(145deg, var(--accent-color), var(--secondary-color));
-      width: 250px;
-      height: 250px;
-      border-radius: 50px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      box-shadow: 0 20px 30px rgba(0, 24, 255, 0.3);
+    /* Larger event image badge - optimized for 1600x1066 displays */
+    .event-image-badge {
+      width: 380px;
+      height: 380px;
+      border-radius: 40px;
+      overflow: hidden;
+      box-shadow: 0 25px 35px rgba(0, 24, 255, 0.25);
       transform: rotate(3deg);
+      transition: transform 0.4s ease;
+      position: relative;
       margin: 0 auto;
     }
-    .gift-badge i {
-      font-size: 4rem;
-      margin-bottom: 10px;
+    .event-image-badge:hover {
+      transform: rotate(0deg) scale(1.03);
     }
-    .gift-badge span {
-      font-size: 1.5rem;
+    .event-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,24,255,0.95), rgba(0,24,255,0.3), transparent);
+      color: white;
+      padding: 30px 20px 20px;
       font-weight: 700;
+      font-size: 1.4rem;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      backdrop-filter: blur(3px);
+    }
+    body.dark-mode .event-image-badge {
+      box-shadow: 0 25px 35px rgba(0, 0, 0, 0.7);
+    }
+    @media (max-width: 992px) {
+      .event-image-badge {
+        width: 320px;
+        height: 320px;
+      }
+    }
+    @media (max-width: 768px) {
+      .event-image-badge {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+      }
     }
 
     /* why join + iphone */
@@ -844,9 +867,6 @@
       .logo-img { height: 36px; }
       .logo-text { font-size: 1.2rem; }
       .who-bullet-item { padding: 12px 16px; gap: 12px; }
-      .gift-badge { width: 200px; height: 200px; border-radius: 40px; }
-      .gift-badge i { font-size: 3rem; }
-      .gift-badge span { font-size: 1.2rem; }
       .iphone-mock { max-width: 260px; }
     }
 
@@ -886,13 +906,13 @@
        Meet, Think, and Decide.</span></h1>
       <p>Join our Professional Community, Influence New Tech, and Enhance your Expertise with bespoke events, summits, expert-led webinars, and more.</p>
       <div class="hero-buttons">
-        <a href="#contact" class="btn btn-accent">Contact US</i></a>
+        <a href="#contact" class="btn btn-accent">Contact US<i class="fas fa-gift"></i></a>
         <a href="event.html" class="btn btn-secondary" target="_blanke">Explore <i class="fas fa-arrow-down"></i></a>
       </div>
     </div>
   </section>
 
-  <!-- WHO WE ARE -->
+  <!-- WHO WE ARE - WITH LARGER EVENT IMAGE (optimized for 1600x1066) -->
   <section id="who" class="who-we-are">
     <div class="container">
       <div class="section-title">
@@ -909,10 +929,12 @@
           </div>
         </div>
         <div class="who-illustration">
-          <div class="gift-badge">
-            <i class="fas fa-gift"></i>
-            <span>100+ gifts</span>
-            <small style="font-size:0.9rem;">& rewards</small>
+          <!-- Larger event image badge - perfect for 1600x1066 displays -->
+          <div class="event-image-badge">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=800&fit=crop&auto=format" alt="Executive gathering with professionals at a corporate event" style="width: 100%; height: 100%; object-fit: cover; border-radius: 40px;">
+            <div class="event-overlay">
+              <span>Executive Events</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1401,23 +1423,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
